@@ -1,3 +1,5 @@
+package game.VisualHelper;
+
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics2D;
@@ -69,7 +71,7 @@ public class World extends JFrame {
 		this(width, height, Color.WHITE);
 	}
 	public World(int width, int height, Color backgroundColor) {
-		super("MINI-game");
+		super("Game Visuals");
 		this.centerX = width/2;
 		this.centerY = height/2;
 		

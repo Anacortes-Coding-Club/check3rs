@@ -1,3 +1,5 @@
+package game.VisualHelper;
+
 import java.awt.image.BufferedImage;
 
 public class ImageTo2DArray

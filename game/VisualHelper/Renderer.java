@@ -1,9 +1,14 @@
+package game.VisualHelper;
 
 import java.awt.Color;
 import java.awt.Dimension;
 
 import game.Stone;
 import game.VisualInterface;
+
+//import Turtle;
+//import World;
+//import MoveAdapter;
 
 public class Renderer implements VisualInterface
 {
@@ -16,7 +21,7 @@ public class Renderer implements VisualInterface
 
     public Renderer()
     {
-        habitat = new World(screenW, screenH, Color.BLACK);
+        habitat = new World(screenW, screenH, Color.BLUE);
         habitat.setResizable(false);
         habitat.setDefaultCloseOperation(World.EXIT_ON_CLOSE);
 
@@ -28,6 +33,7 @@ public class Renderer implements VisualInterface
 
         mainTurtl = new Turtle(habitat);
         mainTurtl.setPenWidth(5);
+        mainTurtl.penUp();
         mainTurtl.turnLeft(90);
         mainTurtl.setColor(new Color(0,0,0));
 
@@ -37,15 +43,27 @@ public class Renderer implements VisualInterface
     @Override
     public void updateVisuals(Stone[][] gameBoard)
     {
-        
+        int scale = 64;
         
         //draw board
         for(int row = 0; row < gameBoard.length; row++)
         {
             for(int col = 0; col < gameBoard[row].length; col++)
             {
-                mainTurtl.goTo((row * 32) - gameBoard.length / 2, (col * 32) - gameBoard[row].length / 2);
-                mainTurtl.drop("../Sprites/frame.png",32);
+                mainTurtl.goTo(((row * scale) - gameBoard.length * scale / 2) + scale/2, ((col * scale) - gameBoard[row].length * scale / 2) + scale/2);
+                mainTurtl.drop("game/Sprites/frame.png",scale);
+                
+                if(gameBoard[row][col] != null)
+                {
+                   if(gameBoard[row][col].isRed())
+                   {
+                     mainTurtl.drop("game/Sprites/red.png",scale);
+                   }
+                   else
+                   {
+                     mainTurtl.drop("game/Sprites/blue.png",scale);
+                   }
+                }
             }
         }
 

@@ -1,5 +1,7 @@
 package game;
 
+//import game.VisualHelper.*;
+
 public class Check3rs {
     Stone[][] gameBoard = new Stone[8][8];
     BotInterface player1, player2;
@@ -26,5 +28,15 @@ public class Check3rs {
 
     public static void main(String[] args) {
         Check3rs match = new Check3rs(null, null);
+
+        VisualInterface rend = new Renderer();
+        
+        Stone[][] test = new Stone[7][9];
+        
+        test[2][2] = new Stone(true);
+        
+        test[6][3] = new Stone(false);
+        
+        rend.updateVisuals(test);
     }
 }
