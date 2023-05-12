@@ -1,5 +1,6 @@
 
 import java.awt.Color;
+import java.awt.Dimension;
 
 import game.Stone;
 import game.VisualInterface;
@@ -7,11 +8,11 @@ import game.VisualInterface;
 public class Renderer implements VisualInterface
 {
     
-    private static World habitat;
-    private static Turtle mainTurtl;
+    private World habitat;
+    private Turtle mainTurtl;
   
-    private static int screenW = 900;
-    private static int screenH = 600;
+    private int screenW = 900;
+    private int screenH = 600;
 
     public Renderer()
     {
@@ -37,6 +38,17 @@ public class Renderer implements VisualInterface
     public void updateVisuals(Stone[][] gameBoard)
     {
         
+        
+        //draw board
+        for(int row = 0; row < gameBoard.length; row++)
+        {
+            for(int col = 0; col < gameBoard[row].length; col++)
+            {
+                mainTurtl.goTo((row * 32) - gameBoard.length / 2, (col * 32) - gameBoard[row].length / 2);
+                mainTurtl.drop("../Sprites/frame.png",32);
+            }
+        }
+
         //Update Screen
         habitat.turtleMoved();
     }
