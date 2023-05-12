@@ -1,6 +1,6 @@
 package game;
 
-//import game.VisualHelper.*;
+import game.VisualHelper.*;
 
 public class Check3rs {
     Stone[][] gameBoard = new Stone[8][8];
@@ -28,7 +28,7 @@ public class Check3rs {
 
     public static void main(String[] args)
     {
-        Check3rs match = new Check3rs(null, null);
+        //Check3rs match = new Check3rs(null, null);
 
         VisualInterface rend = new Renderer();
         
