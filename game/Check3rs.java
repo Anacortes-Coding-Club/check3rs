@@ -26,7 +26,8 @@ public class Check3rs {
 
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         Check3rs match = new Check3rs(null, null);
 
         VisualInterface rend = new Renderer();
