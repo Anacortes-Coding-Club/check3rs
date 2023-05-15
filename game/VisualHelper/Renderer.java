@@ -25,9 +25,9 @@ public class Renderer implements VisualInterface
         habitat.setResizable(false);
         habitat.setDefaultCloseOperation(World.EXIT_ON_CLOSE);
 
-        MoveAdapter worldPos = new MoveAdapter();
+        //MoveAdapter worldPos = new MoveAdapter();
 
-        habitat.addComponentListener(worldPos);
+        //habitat.addComponentListener(worldPos);
 
         habitat.setVisible(true);
 
