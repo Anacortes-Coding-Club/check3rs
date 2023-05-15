@@ -1,7 +1,7 @@
 package game.VisualHelper;
 
 import java.awt.Color;
-import java.awt.Dimension;
+//import java.awt.Dimension;
 
 import game.Stone;
 import game.VisualInterface;
