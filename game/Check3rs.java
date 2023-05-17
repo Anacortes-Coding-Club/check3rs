@@ -1,5 +1,7 @@
 package game;
 
+import java.awt.Color;
+
 import game.VisualHelper.*;
 
 public class Check3rs {

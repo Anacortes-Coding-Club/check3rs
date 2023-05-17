@@ -191,7 +191,7 @@ public class World extends JFrame {
 		this.drawLine(p1,  new Point2D.Double(nx,ny), width, color);
 	}
 	/**
-	 * Should only called by Turtle class methods 
+	 * Repaints the Screen, removed auto functionality from turtles for performance
 	 */
 	void turtleMoved() {
 		// show the drawn lines
