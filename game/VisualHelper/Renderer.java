@@ -74,8 +74,10 @@ public class Renderer implements VisualInterface
         {
             for(int col = 0; col < gameBoard[row].length; col++)
             {
+                //mainTurtl.goTo(((row * scale) - gameBoard.length * scale / 2) + scale/2, ((col * scale) - gameBoard[row].length * scale / 2) + scale/2);
+
                 //board positioning and plotting
-                mainTurtl.goTo(((row * scale) - gameBoard.length * scale / 2) + scale/2, ((col * scale) - gameBoard[row].length * scale / 2) + scale/2);
+                mainTurtl.goTo(((col * scale) - gameBoard[row].length * scale / 2) + scale/2, (gameBoard.length * scale / 2 -(row * scale)) - scale/2);
                 mainTurtl.drop("game/Sprites/frame.png",scale);
                 
                 //Stone spotting
