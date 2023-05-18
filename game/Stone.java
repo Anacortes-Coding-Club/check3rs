@@ -48,6 +48,6 @@ public class Stone {
         } else {
             out += " pawn";
         }
-        return out;
+        return out + ")";
     }
 }
