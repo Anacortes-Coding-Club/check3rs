@@ -12,7 +12,7 @@ public class WalliBot implements BotInterface{
     }
 
     @Override
-    public Stone[][] move(Stone[][] gameBoard) {
+    public Stone[][] takeTurn(Stone[][] gameBoard) {
         //needs code
         throw new UnsupportedOperationException("Unimplemented method 'move'");
     }

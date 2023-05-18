@@ -13,5 +13,5 @@ public interface BotInterface {
      * @param gameBoard
      * @return              Return type will most likely change. Start with reading the board in the meantime.
      */
-    public Stone[][] move(Stone[][] gameBoard);
+    public Stone[][] takeTurn(Stone[][] gameBoard);
 }
